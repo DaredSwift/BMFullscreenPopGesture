@@ -7,7 +7,7 @@
 <p>&nbsp;</p>
 <h2>2.使用</h2>
 <blockquote>
-<p>默认为开启全屏侧滑动返回功能。</p>
+<p>默认为开启全屏侧滑返回。</p>
 </blockquote>
 <h3>　　2.1. 对单个控制器（UIViewController）操作</h3>
 <div class="cnblogs_code">
