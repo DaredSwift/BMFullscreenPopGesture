@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ODE-fY-iv8">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--vc-->
+        <scene sceneID="ygY-vI-FGf">
+            <objects>
+                <viewController id="JIa-k4-I7M" customClass="ViewController" customModule="BMFullscreenPopGestureDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eQE-Zf-rgN"/>
+                        <viewControllerLayoutGuide type="bottom" id="hJl-gJ-Ius"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oiO-2v-WTl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6T-F4-gtr">
+                                <rect key="frame" x="245" y="164" width="315" height="30"/>
+                                <state key="normal" title="关闭此控制器所在的导航控制器的侧滑返回功能"/>
+                                <connections>
+                                    <action selector="cancelAll:" destination="JIa-k4-I7M" eventType="touchUpInside" id="Kqe-45-mfU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnL-ZX-ioF">
+                                <rect key="frame" x="365" y="294" width="195" height="30"/>
+                                <state key="normal" title="关闭此控制器的侧滑返回功能"/>
+                                <connections>
+                                    <action selector="cancelVC:" destination="JIa-k4-I7M" eventType="touchUpInside" id="y6P-8A-0D8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TnL-ZX-ioF" secondAttribute="trailing" constant="20" id="SeX-HB-y6h"/>
+                            <constraint firstItem="D6T-F4-gtr" firstAttribute="top" secondItem="eQE-Zf-rgN" secondAttribute="bottom" constant="100" id="Tpg-qS-e8w"/>
+                            <constraint firstItem="TnL-ZX-ioF" firstAttribute="top" secondItem="D6T-F4-gtr" secondAttribute="bottom" constant="100" id="fcI-5l-oJC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D6T-F4-gtr" secondAttribute="trailing" constant="20" id="tmT-Yo-DXj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="vc" id="QlU-pM-g3G">
+                        <barButtonItem key="rightBarButtonItem" id="Zne-YO-hoo"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelAllButton" destination="D6T-F4-gtr" id="4pr-3N-4FE"/>
+                        <outlet property="cancelVCButton" destination="TnL-ZX-ioF" id="1xM-FD-Bpo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U5r-Ws-7qb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1551" y="443"/>
+        </scene>
+        <!--root-->
+        <scene sceneID="3Nz-zT-yJ2">
+            <objects>
+                <viewController id="aTm-oV-N01" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r12-Lg-tZV"/>
+                        <viewControllerLayoutGuide type="bottom" id="7cY-9J-VYt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S4C-MC-Iso">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="root" id="lka-OI-biM">
+                        <barButtonItem key="rightBarButtonItem" title="push" id="lqo-PW-GgI">
+                            <connections>
+                                <segue destination="JIa-k4-I7M" kind="push" id="3rT-gJ-aYH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Nn-Ac-aFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="416"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nnP-uu-em4">
+            <objects>
+                <navigationController id="ODE-fY-iv8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZWq-38-NVh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aTm-oV-N01" kind="relationship" relationship="rootViewController" id="fhh-vk-EDw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Him-JI-FdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="835"/>
+        </scene>
+    </scenes>
+</document>
