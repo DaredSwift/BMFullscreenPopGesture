@@ -19,7 +19,7 @@
         let vc1 =<span style="color: #000000;"> UIViewController()
         vc1.bm_setFullscreen(</span><span style="color: #0000ff;">true</span>)</pre>
 </div>
-<h3>　　2.2.对导航控制器（UIViewController）操作</h3>
+<h3>　　2.2.对导航控制器（UINavigationController）操作</h3>
 <div class="cnblogs_code">
 <pre>        <span style="color: #008000;">//</span><span style="color: #008000;"> 关闭 vc 的侧滑返回功能</span>
         let vc =<span style="color: #000000;"> UIViewController()
